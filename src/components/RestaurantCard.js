@@ -5,7 +5,7 @@ const RestaurantCard = (props) => {
     // console.log(props);
     const {resData} = props
 
-    const {name, cuisines, avgRating, sla, costForTwo} = resData[0]?.data
+    const {name, cuisines, avgRating, deliveryTime, costForTwoString} = resData.data;
 
     return (
         <div className="restaurant-card">
@@ -19,11 +19,11 @@ const RestaurantCard = (props) => {
                     </div>
 
                     <div className="delivery-time">
-                        <span>◷</span>{sla.slaString}
+                        <span>◷</span>{deliveryTime} minutes
                     </div>
                 </div>
                  <div className="restaurant-price">
-                    {costForTwo}
+                    {costForTwoString}
                 </div>
             </div>
         </div>
