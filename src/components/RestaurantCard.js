@@ -5,11 +5,11 @@ const RestaurantCard = (props) => {
     // console.log(props);
     const {resData} = props
 
-    const {name, cuisines, avgRating, deliveryTime, costForTwoString} = resData.data;
+   const {name, cloudinaryImageId, cuisines, avgRating, sla, costForTwo} = resData.info;
 
     return (
         <div className="restaurant-card">
-            <img src={CARD_IMG_URL} alt="Restaurant"/>
+            <img src={CARD_IMG_URL+ cloudinaryImageId} alt="Restaurant Image"/>
             <div className="card-content">
                 <h3>{name}</h3>
                 <p>{cuisines.join(", ")}</p>
@@ -19,11 +19,11 @@ const RestaurantCard = (props) => {
                     </div>
 
                     <div className="delivery-time">
-                        <span>◷</span>{deliveryTime} minutes
+                        <span>◷</span>{sla.deliveryTime} minutes
                     </div>
                 </div>
                  <div className="restaurant-price">
-                    {costForTwoString}
+                    {costForTwo}
                 </div>
             </div>
         </div>

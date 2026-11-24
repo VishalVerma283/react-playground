@@ -1,13 +1,23 @@
 import {LOGO_IMG_URL} from "../utils/constants";
+import { use, useState } from "react";
+
 
 // Header
 const Header = () => {
+
+    const  [btnNameReact, setBtnNameReact] = useState("Login"); 
+
+    const handleLogin = () => {
+        btnNameReact === "Login" ? setBtnNameReact("Logout") : setBtnNameReact("Login")
+    }
+
     return (
         <header className="header">
             <div className="container">
 
                 <a href="#" className="logo">
-                    <img src={LOGO_IMG_URL} />
+                    LOGO
+                    {/* <img src={LOGO_IMG_URL} /> */}
                 </a>
 
                 <nav className="navigation">
@@ -19,7 +29,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <a href="#" className="header-btn">Sign in</a>
+                <button onClick={handleLogin} className="loginBtn">{btnNameReact}</button>
 
             </div>
         </header>
