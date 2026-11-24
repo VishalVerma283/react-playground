@@ -21,36 +21,33 @@
 
 
 # Food App
-/**
+
     * Header 
-    * - Logo
-    * - Nav Items
+        - Logo
+        - Nav Items
     * Body
-    * - Search
-    * - Reastaurant Container
-    *   - Reastaurant Card
-    *     - Image
-    *     - Name Of Reastaurant, Star Rating, Cuisine, Delivery Time
+        - Search
+        - Reastaurant Container
+        - Reastaurant Card
+            - Image
+            - Name Of Reastaurant, Star Rating, Cuisine, Delivery Time
     * Footer
-    * - Copyright
-    * - Links
-    * - Address
-    * - Contact
-*/
+        - Copyright
+   
+
 
 # Two types of Export/Import
 
-- Default Export/Import
-    export default Component
-    import Component from "path";
+    - Default Export/Import
+        - export default Component
+        - import Component from "path";
 
-- Named Export/Import
-
-    export const Component;
-    import {Component} from "path";
+    - Named Export/Import
+        - export const Component;
+        - import {Component} from "path";
 
 # React Hooks
 
-    (Normal JS utility functions)
-    - useState() - Superpowerful state Variables in react
-    - useEffect() - 
+    - Normal JS utility functions
+        - useState()  - Superpowerful state Variables in react
+        - useEffect() - 
