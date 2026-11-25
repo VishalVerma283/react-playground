@@ -56,7 +56,7 @@ body {
 
 .navigation ul li a:hover,
 .navigation ul li a.active {
-    color: #fff;
+    color: #000000;
 }
 
 .loginBtn {
@@ -99,6 +99,10 @@ body {
     transition: all 0.3s ease;
 }
 
+.restaurant-card a{
+    text-decoration: none;
+    color: #010101;
+}
 .restaurant-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
@@ -495,5 +499,102 @@ body {
     .shimmer-search,
     .shimmer-filter-btn {
         animation: none;
+    }
+}
+
+/* Error */
+
+.error-page {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: #fafafa;
+}
+
+.error-content {
+    max-width: 500px;
+    text-align: center;
+}
+
+.error-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0e9;
+    border-radius: 50%;
+    font-size: 45px;
+}
+
+.error-content h1 {
+    font-size: 65px;
+    font-weight: 800;
+    color: #FF5200;
+    margin-bottom: 5px;
+}
+
+.error-content h2 {
+    font-size: 25px;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.error-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #777777;
+    margin-bottom: 28px;
+}
+
+.error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 25px;
+    background: #FF5200;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.error-btn:hover {
+    background: #e84900;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 82, 0, 0.25);
+}
+
+.error-btn span {
+    font-size: 20px;
+}
+
+.error-code {
+    margin-top: 35px;
+    color: #bbbbbb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .error-content h1 {
+        font-size: 50px;
+    }
+
+    .error-content h2 {
+        font-size: 21px;
+    }
+
+    .error-content p {
+        font-size: 14px;
     }
 }

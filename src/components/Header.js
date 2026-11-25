@@ -1,9 +1,11 @@
 import {LOGO_IMG_URL} from "../utils/constants";
-import { use, useState } from "react";
-
+import { useState} from "react";
+import { Link } from "react-router";
 
 // Header
 const Header = () => {
+
+    
 
     const  [btnNameReact, setBtnNameReact] = useState("Login"); 
 
@@ -15,17 +17,25 @@ const Header = () => {
         <header className="header">
             <div className="container">
 
-                <a href="#" className="logo">
+                <Link to="/" className="logo">
                     LOGO
                     {/* <img src={LOGO_IMG_URL} /> */}
-                </a>
+                </Link>
 
                 <nav className="navigation">
                     <ul>
-                        <li><a href="#" className="active">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Cart</a></li>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact</Link>
+                        </li>
+                        <li>
+                            <Link to="/cart">Cart</Link>
+                        </li>
                     </ul>
                 </nav>
 
