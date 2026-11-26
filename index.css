@@ -14,6 +14,36 @@ body {
     width: 100%;
     background: #ff5200;
     padding: 18px 0;
+    position: relative;
+}
+
+.statusDot {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 70px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.redDot{
+    background-color: #ff0404;
+}
+
+.greenDot{
+    background-color: #00da4a;
 }
 
 .container {

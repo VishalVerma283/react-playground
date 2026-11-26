@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
+// import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
     // Local State Variable
@@ -9,7 +10,6 @@ const Body = () => {
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
     const [searchText, setSearchText] = useState("");
-
 
     useEffect(() => {
         fetchData();
@@ -47,15 +47,20 @@ const Body = () => {
     // Top Restaurant
     const handleFilter = () => {
         const filteredList = listOfRestaurants.filter(
-            (res) => Number(res.info.avgRating > 4.3)
+            (res) => res.info.avgRating > 4.3
         );
         setFilteredRestaurant(filteredList);
     };
 
-    
-    return listOfRestaurants.length === 0 ? (
-    <Shimmer />
-    ):(
+    // const onlineStatus = useOnlineStatus();
+
+    // if(onlineStatus === false) 
+    //     return(
+    //         <h1>You are Offline</h1>
+    //     );
+
+
+    return listOfRestaurants.length === 0 ? (<Shimmer/> ) : (
         <div className="body">
             <div className="card-filters">
                 <div className="search-box">

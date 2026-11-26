@@ -51,3 +51,7 @@
     - Normal JS utility functions
         - useState()  - Superpowerful state Variables in react
         - useEffect() - 
+
+# Chunking
+    
+    - Chunking (Code Splitting, Dynamic Bundling, On demand loading, Laze Loading)

@@ -1,9 +1,12 @@
+import UserClass from "./UserClass";
+
 const About = () => {
+    
     return (
-        <div>
-            <h1>About</h1>
-            <p>This is React PlayGround</p>
-        </div>
+       <div className="about">
+        <h6>About</h6>            
+            <UserClass name="Vishal Verma (Class)" location="Rajasthan (Class)"/>
+       </div>
     )
 }
 
