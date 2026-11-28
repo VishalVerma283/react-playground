@@ -1,5 +1,5 @@
 
-import { CARD_IMG_URL } from "../utils/constants";
+import { CND_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
 
@@ -9,7 +9,8 @@ const RestaurantCard = ({ resData }) => {
         cuisines,
         avgRating,
         sla,
-        costForTwo
+        costForTwo,
+        veg
     } = resData.info;
 
     return (
@@ -18,7 +19,7 @@ const RestaurantCard = ({ resData }) => {
             {/* Restaurant Image */}
             <div className="relative overflow-hidden">
                 <img
-                    src={CARD_IMG_URL + cloudinaryImageId}
+                    src={CND_URL + cloudinaryImageId}
                     alt={name}
                     className="w-full h-[180px] object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -68,6 +69,17 @@ const RestaurantCard = ({ resData }) => {
             </div>
         </div>
     );
+};
+
+export const withVegLabel = (RestaurantCard) => {
+    return(props) => {
+        return(
+           <div>
+             <label className="vegLabel"></label>
+             <RestaurantCard {...props}/>
+           </div>
+        );
+    };
 };
 
 export default RestaurantCard;

@@ -631,3 +631,31 @@ body {
         font-size: 14px;
     }
 }
+
+
+.block{
+    position: relative;
+}
+
+label.vegLabel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 28px;
+    height: 28px;
+    z-index: 5;
+    background-color: #ffffff;
+    border: 1px solid #08a708;
+}
+
+label.vegLabel:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #08a708;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
